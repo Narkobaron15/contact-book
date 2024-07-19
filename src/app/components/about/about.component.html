@@ -1,0 +1,58 @@
+<div class="about-container">
+  <div class="content-wrapper">
+    <h1 class="page-title">
+      About {{ projectName }}
+    </h1>
+
+    <div class="info-card">
+      <div class="card-header">
+        <h2 class="card-title">
+          Project Information
+        </h2>
+        <p class="card-subtitle">
+          Details about the Contact List application.
+        </p>
+      </div>
+      <div class="card-content">
+        <dl>
+          <div class="info-row bg-alt">
+            <dt class="info-label">Project name</dt>
+            <dd class="info-value">{{ projectName }}</dd>
+          </div>
+          <div class="info-row">
+            <dt class="info-label">Version</dt>
+            <dd class="info-value">{{ version }}</dd>
+          </div>
+          <div class="info-row bg-alt">
+            <dt class="info-label">Developer</dt>
+            <dd class="info-value">{{ developer }}</dd>
+          </div>
+          <div class="info-row">
+            <dt class="info-label">Features</dt>
+            <dd class="info-value">
+              <ul class="feature-list">
+                <li class="feature-item" *ngFor="let feature of features">
+                  <div class="feature-content">
+                    <img ngSrc="/checkmark.svg" width="20" height="20" alt="Checkmark" class="feature-icon">
+                    <span class="feature-text">
+                      {{ feature }}
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="about-footer">
+      <p>
+        For more information or support, please contact us at
+        <a href="mailto:{{ supportEmail }}" class="email-link">
+          {{ supportEmail }}
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
