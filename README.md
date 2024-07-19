@@ -1,27 +1,71 @@
-# ContactBook
+# Angular Contact List Project
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+This project is an implementation of a contact list management system using Angular. It provides a user-friendly interface for managing contacts with features like searching, viewing detailed information, and performing CRUD operations.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Display a list of contacts with basic information (name, surname, phone number)
+- Search functionality to filter contacts in the list
+- Detailed view page for each contact (including birthday, email, address, etc.)
+- Add, edit, and delete contacts
+- Data validation for input fields
+- Local Storage integration for data persistence
+- Initial data seeding
 
-## Code scaffolding
+## Technical Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular (latest version)
+- TypeScript
+- HTML/CSS
+- Local Storage API
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- Node.js (LTS version)
+- npm (comes with Node.js)
+- Angular CLI
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installation
 
-## Running end-to-end tests
+1. Clone the repository:
+   ```
+   git clone https://github.com/Narkobaron15/contact-book.git
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Navigate to the project directory:
+   ```
+   cd angular-contact-list
+   ```
 
-## Further help
+3. Install dependencies:
+   ```
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+4. Start the development server:
+   ```
+   ng serve
+   ```
+
+5. Open your browser and visit `http://localhost:4200`
+
+## Project Structure
+
+- `src/app/components/` - Angular components
+- `src/app/services/` - Services for data management and business logic
+- `src/app/models/` - TypeScript interfaces and classes
+- `src/app/utils/` - Utility functions and helpers
+
+## Data Management
+
+This project uses the browser's Local Storage to persist contact data. Initial seed data is provided and loaded when the application starts for the first time.
+
+## Validation
+
+Input validation is implemented to ensure data integrity. This includes checks for required fields, format validation for email and phone numbers, and other relevant validations.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
