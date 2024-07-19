@@ -1,1 +1,27 @@
-<p>footer works!</p>
+<footer>
+  <div>
+    <div class="sm:flex sm:items-center sm:justify-between">
+      <a routerLink="/" class="logo-link">
+        <img ngSrc="https://flowbite.com/docs/images/logo.svg" width="32" height="32" alt="Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Contact book</span>
+      </a>
+      <ul>
+        <li>
+          <a routerLink="/about" class="hover:underline me-4 md:me-6">About</a>
+        </li>
+        <li>
+          <a routerLink="#" class="hover:underline">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <hr />
+    <span class="copyright">
+      © <span [innerHtml]="currentYear"></span>
+      <a routerLink="https://flowbite.com/" class="hover:underline">
+        Contact book™
+      </a>.&nbsp;
+      All Rights Reserved.
+    </span>
+  </div>
+</footer>
+
