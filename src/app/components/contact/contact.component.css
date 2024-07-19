@@ -1,0 +1,51 @@
+.contact-container {
+  @apply min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8;
+}
+
+.content-wrapper {
+  @apply max-w-7xl mx-auto;
+}
+
+.page-title {
+  @apply text-3xl font-bold text-gray-900 text-center mb-8;
+}
+
+.description {
+  @apply text-center mb-12 max-w-3xl mx-auto;
+}
+
+.description p {
+  @apply text-lg text-gray-600;
+}
+
+.contacts-grid {
+  @apply grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3;
+}
+
+.contact-card {
+  @apply bg-white overflow-hidden shadow-lg rounded-lg;
+}
+
+.contact-info {
+  @apply px-4 py-5 sm:p-6;
+}
+
+.contact-name {
+  @apply text-lg leading-6 font-medium text-gray-900;
+}
+
+.contact-position {
+  @apply mt-1 text-sm text-gray-500;
+}
+
+.contact-email, .contact-phone {
+  @apply mt-2 flex items-center text-sm text-gray-600;
+}
+
+.icon {
+  @apply mr-2;
+}
+
+.footer {
+  @apply mt-12 text-center text-gray-600;
+}

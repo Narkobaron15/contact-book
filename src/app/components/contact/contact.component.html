@@ -1,0 +1,28 @@
+<div class="contact-container">
+  <div class="content-wrapper">
+    <h1 class="page-title">Contact Us</h1>
+
+    <div class="description">
+      <p>Welcome to our Contact page. Here you can find information about our key team members. Feel free to reach out to us with any questions or concerns about our Contact List application.</p>
+    </div>
+
+    <div class="contacts-grid">
+      <div class="contact-card" *ngFor="let contact of contacts">
+        <div class="contact-info">
+          <h2 class="contact-name">{{ contact.name }}</h2>
+          <p class="contact-position">{{ contact.position }}</p>
+          <p class="contact-email">
+            <span class="icon">✉️</span> {{ contact.email }}
+          </p>
+          <p class="contact-phone">
+            <span class="icon">📞</span> {{ contact.phone }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>Our office hours are Monday to Friday, 9:00 AM - 5:00 PM EST.</p>
+    </div>
+  </div>
+</div>

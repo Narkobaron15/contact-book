@@ -5,6 +5,7 @@ import {NotFoundComponent} from "../not-found/not-found.component";
 import {UpdateComponent} from "../update/update.component";
 import {CreateComponent} from "../create/create.component";
 import {AboutComponent} from "../about/about.component";
+import {ContactComponent} from "../contact/contact.component";
 
 export const routes: Routes = [
   {
@@ -36,6 +37,11 @@ export const routes: Routes = [
   {
     path: 'about',
     component: AboutComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
     pathMatch: 'full',
   },
   {
