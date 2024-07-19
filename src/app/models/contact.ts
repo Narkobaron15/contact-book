@@ -19,7 +19,7 @@ export default class Contact {
     this.avatar = avatar;
   }
 
-  public avatarUrl(): string {
-    return this.avatar ?? `https://ui-avatars.com/api/?name=${this.name}&size=64`
+  public avatarUrl(size: number = 64): string {
+    return this.avatar ?? `https://ui-avatars.com/api/?name=${this.name}&size=${size}`
   }
 }

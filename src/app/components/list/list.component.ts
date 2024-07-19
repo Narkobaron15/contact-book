@@ -16,9 +16,7 @@ import {RouterLink} from "@angular/router";
   styleUrl: './list.component.css',
 })
 export class ListComponent {
-  constructor(
-    private contactService: ContactService,
-  ) {
+  constructor(private contactService: ContactService) {
   }
 
   get contacts() {

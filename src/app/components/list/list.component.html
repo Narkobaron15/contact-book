@@ -12,8 +12,8 @@
     <tbody>
     <tr *ngFor="let contact of contacts">
       <td>
-        <a [routerLink]="['/contacts', contact.id]">
-          <img [ngSrc]="contact.avatarUrl()" [alt]="contact.name" class="contact-avatar" width="64" height="64">
+        <a [routerLink]="['/contacts', contact.id]" class="max-w-8 max-h-8">
+          <img [src]="contact.avatarUrl()" [alt]="contact.name + '\'s avatar'" class="contact-avatar h-8">
         </a>
       </td>
       <td class="contact-name">
