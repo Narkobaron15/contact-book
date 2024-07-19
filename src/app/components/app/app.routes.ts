@@ -2,12 +2,11 @@ import {Routes} from '@angular/router';
 import {ListComponent} from "../list/list.component";
 import {DetailsComponent} from "../details/details.component";
 import {NotFoundComponent} from "../not-found/not-found.component";
-import {UpdateComponent} from "../update/update.component";
-import {CreateComponent} from "../create/create.component";
 import {AboutComponent} from "../about/about.component";
 import {ContactComponent} from "../contact/contact.component";
 import ContactService from "../../services/contact/contact.service";
 import {inject} from "@angular/core";
+import {ContactFormComponent} from "../contact-form/contact-form.component";
 
 export const routes: Routes = [
   {
@@ -34,13 +33,13 @@ export const routes: Routes = [
   },
   {
     path: 'create',
-    component: CreateComponent,
+    component: ContactFormComponent,
     pathMatch: 'full',
     title: 'New contact',
   },
   {
     path: 'contacts/:id/edit',
-    component: UpdateComponent,
+    component: ContactFormComponent,
     pathMatch: 'full',
     title: (route, _state) => {
       const service = inject(ContactService)

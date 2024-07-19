@@ -1,0 +1,37 @@
+<div class="form-container">
+  <h2 class="form-title">{{ isEditMode ? 'Edit' : 'Add' }} Contact</h2>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="contact-form">
+    <div class="form-group">
+      <label for="name" class="form-label">Name:</label>
+      <input type="text" id="name" formControlName="name" class="form-input">
+      <div *ngIf="contactForm.get('name')?.invalid && contactForm.get('name')?.touched" class="error-message">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="form-label">Email:</label>
+      <input type="email" id="email" formControlName="email" class="form-input">
+      <div *ngIf="contactForm.get('email')?.invalid && contactForm.get('email')?.touched" class="error-message">
+        Please enter a valid email.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone" class="form-label">Phone:</label>
+      <input type="tel" id="phone" formControlName="phone" class="form-input">
+      <div *ngIf="contactForm.get('phone')?.invalid && contactForm.get('phone')?.touched" class="error-message">
+        Phone is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="avatar" class="form-label">Avatar URL:</label>
+      <input type="url" id="avatar" formControlName="avatar" class="form-input">
+    </div>
+
+    <button type="submit" [disabled]="!contactForm.valid" class="submit-button">
+      {{ isEditMode ? 'Update' : 'Add' }} Contact
+    </button>
+  </form>
+</div>
