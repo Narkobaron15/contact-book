@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {NgForOf, NgOptimizedImage} from "@angular/common";
+import { Component } from '@angular/core'
+import {NgForOf, NgOptimizedImage} from "@angular/common"
 
 @Component({
   selector: 'app-about',
@@ -12,9 +12,9 @@ import {NgForOf, NgOptimizedImage} from "@angular/common";
   styleUrl: './about.component.css'
 })
 export class AboutComponent {
-  public projectName = 'Angular Contact List';
-  public version = '1.0.0';
-  public developer = 'Alex Ivanov';
+  public projectName = 'Angular Contact List'
+  public version = '1.0.0'
+  public developer = 'Alex Ivanov'
   public features = [
     'Display list of contacts',
     'Search functionality',
@@ -24,6 +24,6 @@ export class AboutComponent {
     'Delete contacts',
     'Data validation',
     'Local storage for data persistence'
-  ];
+  ]
   public supportEmail = 'support@example.com'
 }

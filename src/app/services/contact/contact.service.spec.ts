@@ -1,15 +1,15 @@
-import { TestBed } from '@angular/core/testing';
-import ContactService from "./contact.service";
+import { TestBed } from '@angular/core/testing'
+import ContactService from "./contact.service"
 
 describe('LocalContactService', () => {
-  let service: ContactService;
+  let service: ContactService
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(ContactService);
-  });
+    TestBed.configureTestingModule({})
+    service = TestBed.inject(ContactService)
+  })
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
-});
+    expect(service).toBeTruthy()
+  })
+})

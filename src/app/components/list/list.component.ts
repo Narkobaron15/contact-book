@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
-import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
-import ContactService from "../../services/contact/contact.service";
-import {RouterLink} from "@angular/router";
+import {Component} from '@angular/core'
+import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common"
+import ContactService from "../../services/contact/contact.service"
+import {RouterLink} from "@angular/router"
 
 @Component({
   selector: 'app-list',

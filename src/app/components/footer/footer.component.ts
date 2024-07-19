@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
-import {NgOptimizedImage} from "@angular/common";
+import { Component } from '@angular/core'
+import {RouterLink} from "@angular/router"
+import {NgOptimizedImage} from "@angular/common"
 
 @Component({
   selector: 'app-footer',
@@ -13,5 +13,5 @@ import {NgOptimizedImage} from "@angular/common";
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  public currentYear = new Date().getFullYear();
+  public currentYear = new Date().getFullYear()
 }

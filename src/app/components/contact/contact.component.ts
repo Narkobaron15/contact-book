@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NgForOf} from "@angular/common";
+import {Component} from '@angular/core'
+import {NgForOf} from "@angular/common"
 
 @Component({
   selector: 'app-contact',
@@ -35,5 +35,5 @@ export class ContactComponent {
       email: 'mike.johnson@example.com',
       phone: '+1 (555) 246-8135',
     },
-  ];
+  ]
 }

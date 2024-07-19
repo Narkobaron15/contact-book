@@ -1,7 +1,7 @@
-import Contact from "../../models/contact";
-import ContactService from "../contact/contact.service";
-import {Inject, Injectable} from "@angular/core";
-import {DOCUMENT} from "@angular/common";
+import Contact from "../../models/contact"
+import ContactService from "../contact/contact.service"
+import {Inject, Injectable} from "@angular/core"
+import {DOCUMENT} from "@angular/common"
 
 @Injectable()
 export class LocalContactService implements ContactService {

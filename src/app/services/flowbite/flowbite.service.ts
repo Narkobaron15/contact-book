@@ -1,6 +1,6 @@
 // src/app/services/flowbite.service.ts
-import { Injectable, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
+import { Injectable, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +12,9 @@ export class FlowbiteService {
     if (isPlatformBrowser(this.platformId)) {
       import('flowbite').then(flowbite => {
         if (callback) {
-          callback(flowbite);
+          callback(flowbite)
         }
-      });
+      })
     }
   }
 }

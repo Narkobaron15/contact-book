@@ -1,12 +1,12 @@
-import {Routes} from '@angular/router';
-import {ListComponent} from "../list/list.component";
-import {DetailsComponent} from "../details/details.component";
-import {NotFoundComponent} from "../not-found/not-found.component";
-import {AboutComponent} from "../about/about.component";
-import {ContactComponent} from "../contact/contact.component";
-import ContactService from "../../services/contact/contact.service";
-import {inject} from "@angular/core";
-import {ContactFormComponent} from "../contact-form/contact-form.component";
+import {Routes} from '@angular/router'
+import {ListComponent} from "../list/list.component"
+import {DetailsComponent} from "../details/details.component"
+import {NotFoundComponent} from "../not-found/not-found.component"
+import {AboutComponent} from "../about/about.component"
+import {ContactComponent} from "../contact/contact.component"
+import ContactService from "../../services/contact/contact.service"
+import {inject} from "@angular/core"
+import {ContactFormComponent} from "../contact-form/contact-form.component"
 
 export const routes: Routes = [
   {
@@ -64,4 +64,4 @@ export const routes: Routes = [
     component: NotFoundComponent,
     title: '404 Not Found',
   },
-];
+]

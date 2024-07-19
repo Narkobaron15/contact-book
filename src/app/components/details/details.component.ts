@@ -1,9 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import ContactService from "../../services/contact/contact.service";
-import Contact from "../../models/contact";
-import {ActivatedRoute, Router} from "@angular/router";
-import {NgIf, NgOptimizedImage} from "@angular/common";
-import {SpinnerComponent} from "../spinner/spinner.component";
+import {Component, OnInit} from '@angular/core'
+import ContactService from "../../services/contact/contact.service"
+import Contact from "../../models/contact"
+import {ActivatedRoute, Router} from "@angular/router"
+import {NgIf, NgOptimizedImage} from "@angular/common"
+import {SpinnerComponent} from "../spinner/spinner.component"
 
 @Component({
   selector: 'app-details',
@@ -27,7 +27,7 @@ export class DetailsComponent implements OnInit {
   }
 
   get contact(): Contact {
-    return this._contact!;
+    return this._contact!
   }
 
   editContact(): void {
@@ -42,15 +42,15 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    const id = Number(this.route.snapshot.paramMap.get('id'));
-    const contact = this.service.getContact(id);
+    const id = Number(this.route.snapshot.paramMap.get('id'))
+    const contact = this.service.getContact(id)
 
     if (!contact) {
       // redirect to 404
-      this.router.navigate(['/404']).catch(console.error);
+      this.router.navigate(['/404']).catch(console.error)
       return
     }
 
-    this._contact = contact;
+    this._contact = contact
   }
 }
