@@ -20,6 +20,6 @@ export default class Contact {
   }
 
   public avatarUrl(): string {
-    return this.avatar ?? `https://ui-avatars.com/api/?name=${this.name}&size=128`
+    return this.avatar ?? `https://ui-avatars.com/api/?name=${this.name}&size=64`
   }
 }

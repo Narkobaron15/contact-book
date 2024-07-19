@@ -1,23 +1,27 @@
-.not-found-container {
-  @apply min-h-screen bg-gray-100 flex flex-col justify-center items-center;
-}
+@tailwind components;
 
-.content-wrapper {
-  @apply text-center;
-}
+@layer components {
+  .not-found-container {
+    @apply min-h-screen bg-gray-100 flex flex-col justify-center items-center;
+  }
 
-.error-code {
-  @apply text-9xl font-bold text-gray-800;
-}
+  .content-wrapper {
+    @apply text-center;
+  }
 
-.error-message {
-  @apply text-6xl font-medium py-8;
-}
+  .error-code {
+    @apply text-9xl font-bold text-gray-800;
+  }
 
-.error-description {
-  @apply text-2xl pb-8 px-12 font-medium;
-}
+  .error-message {
+    @apply text-6xl font-medium py-8;
+  }
 
-.home-button {
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  .error-description {
+    @apply text-2xl pb-8 px-12 font-medium;
+  }
+
+  .home-button {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
 }

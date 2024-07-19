@@ -1,9 +1,17 @@
 import Contact from "../models/contact";
+import {Injectable} from "@angular/core";
+import {LocalContactService} from "./local-contact.service";
 
-export default interface ContactService {
-  get contacts(): Contact[]
-  getContact(id: number): Contact | null
-  createContact(contact: Contact): void
-  updateContact(contact: Contact): void
-  deleteContact(id: number): boolean
+@Injectable({
+  providedIn: 'root',
+  useClass: LocalContactService
+})
+abstract class ContactService {
+  abstract get contacts(): Contact[]
+  abstract getContact(id: number): Contact | null
+  abstract createContact(contact: Contact): void
+  abstract updateContact(contact: Contact): void
+  abstract deleteContact(id: number): boolean
 }
+
+export default ContactService

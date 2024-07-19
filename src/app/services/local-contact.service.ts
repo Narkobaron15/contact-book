@@ -1,14 +1,16 @@
-import { Injectable } from '@angular/core';
 import Contact from "../models/contact";
 import ContactService from "./contact.service";
+import {Inject, Injectable} from "@angular/core";
+import {DOCUMENT} from "@angular/common";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class LocalContactService implements ContactService {
   private readonly _contacts: Contact[]
+  private readonly localStorage?: Storage
 
-  constructor() {
+  constructor(@Inject(DOCUMENT) document: Document) {
+    // super()
+    this.localStorage = document.defaultView?.localStorage
     this._contacts = this.initContacts()
     if (this._contacts.length === 0) {
       this._contacts = this.seedContacts()
@@ -46,12 +48,18 @@ export class LocalContactService implements ContactService {
   }
 
   private initContacts() {
-    const contactsJson = localStorage.getItem('contacts') ?? '[]'
-    return JSON.parse(contactsJson)
+    const contactsJson = this.localStorage?.getItem('contacts') ?? '[]'
+    return JSON.parse(contactsJson).map((contact: any) => new Contact(
+      contact.id,
+      contact.name,
+      contact.email,
+      contact.phone,
+      contact.avatar,
+    ))
   }
 
   private saveContacts() {
-    localStorage.setItem('contacts', JSON.stringify(this._contacts))
+    this.localStorage?.setItem('contacts', JSON.stringify(this._contacts))
   }
 
   private seedContacts() {

@@ -1,1 +1,42 @@
-<p>list works!</p>
+<div class="contact-table-container">
+  <table *ngIf="contacts.length > 0" class="contact-table">
+    <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>
+        <a [routerLink]="['/contacts', contact.id]">
+          <img [ngSrc]="contact.avatarUrl()" [alt]="contact.name" class="contact-avatar" width="64" height="64">
+        </a>
+      </td>
+      <td class="contact-name">
+        <a [routerLink]="['/contacts', contact.id]">
+          {{ contact.name }}
+        </a>
+      </td>
+      <td>
+        {{ contact.email }}
+      </td>
+      <td>
+        {{ contact.phone }}
+      </td>
+      <td>
+        <div class="flex">
+          <a [routerLink]="['/contacts', contact.id, 'edit']" class="btn btn-primary me-2">Edit</a>
+          <button (click)="deleteContact(contact.id)" class="btn btn-danger">Delete</button>
+        </div>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div *ngIf="contacts.length === 0" class="text-center">
+    <p class="text-4xl font-bold m-16">No contacts found</p>
+  </div>
+</div>
