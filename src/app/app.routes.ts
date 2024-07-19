@@ -16,6 +16,6 @@ export const routes: Routes = [
     path: 'contacts/:id',
     component: DetailsComponent,
     // TODO: change to service call
-    title: (route, state) => `${route.paramMap.get('id')}'s info`
+    title: (route, _state) => `${route.paramMap.get('id')}'s info`
   }
 ];
