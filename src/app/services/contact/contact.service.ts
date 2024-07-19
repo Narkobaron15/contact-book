@@ -1,6 +1,6 @@
-import Contact from "../models/contact";
+import Contact from "../../models/contact";
 import {Injectable} from "@angular/core";
-import {LocalContactService} from "./local-contact.service";
+import {LocalContactService} from "../local-contact/local-contact.service";
 
 @Injectable({
   providedIn: 'root',

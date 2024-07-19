@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {HeaderComponent} from "../header/header.component";
 import {HomeComponent} from "../home/home.component";
 import {FooterComponent} from "../footer/footer.component";
-import {FlowbiteService} from "../../services/flowbite.service";
+import {FlowbiteService} from "../../services/flowbite/flowbite.service";
 
 @Component({
   selector: 'app-root',

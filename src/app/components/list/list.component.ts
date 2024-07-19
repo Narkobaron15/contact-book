@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {NgForOf, NgIf, NgOptimizedImage} from "@angular/common";
-import ContactService from "../../services/contact.service";
+import ContactService from "../../services/contact/contact.service";
 import {RouterLink} from "@angular/router";
 
 @Component({

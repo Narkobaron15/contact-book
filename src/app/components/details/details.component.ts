@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import ContactService from "../../services/contact.service";
+import ContactService from "../../services/contact/contact.service";
 import Contact from "../../models/contact";
 import {ActivatedRoute, Router} from "@angular/router";
 import {NgIf, NgOptimizedImage} from "@angular/common";
-import {Title} from "@angular/platform-browser";
 import {SpinnerComponent} from "../spinner/spinner.component";
 
 @Component({
@@ -24,7 +23,6 @@ export class DetailsComponent implements OnInit {
     private service: ContactService,
     private route: ActivatedRoute,
     private router: Router,
-    private title: Title,
   ) {
   }
 
@@ -54,6 +52,5 @@ export class DetailsComponent implements OnInit {
     }
 
     this._contact = contact;
-    this.title.setTitle(`${contact.name} details - Contact book`);
   }
 }

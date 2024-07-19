@@ -1,5 +1,5 @@
-import Contact from "../models/contact";
-import ContactService from "./contact.service";
+import Contact from "../../models/contact";
+import ContactService from "../contact/contact.service";
 import {Inject, Injectable} from "@angular/core";
 import {DOCUMENT} from "@angular/common";
 
