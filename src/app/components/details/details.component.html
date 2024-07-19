@@ -22,4 +22,6 @@
     <button class="btn-delete" (click)="deleteContact()">Delete</button>
   </div>
 </div>
-<app-spinner *ngIf="!contact"></app-spinner>
+<div class="spinner-container" *ngIf="!contact">
+  <spinner color="red-600"></spinner>
+</div>
