@@ -1,0 +1,48 @@
+@tailwind components;
+
+@layer components {
+  .contact-card {
+    @apply max-w-sm mx-auto bg-orange-50 dark:bg-blue-700
+    rounded-xl shadow-md overflow-hidden md:max-w-2xl m-4;
+  }
+
+  .contact-header {
+    @apply md:flex;
+  }
+
+  .contact-avatar {
+    @apply h-48 w-full object-cover md:w-48;
+  }
+
+  .contact-name {
+    @apply p-8 text-xl font-semibold text-gray-900;
+  }
+
+  .contact-details {
+    @apply px-4 py-2;
+  }
+
+  .detail-item {
+    @apply mb-2;
+  }
+
+  .detail-label {
+    @apply text-gray-500 font-bold mr-2;
+  }
+
+  .detail-value {
+    @apply text-gray-700;
+  }
+
+  .contact-actions {
+    @apply px-4 py-2 flex justify-end space-x-2;
+  }
+
+  .btn-edit {
+    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .btn-delete {
+    @apply bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded;
+  }
+}

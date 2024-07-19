@@ -1,3 +1,25 @@
-<div class="flex">
-  <span class="mx-auto">details works!</span>
+<div class="contact-card" *ngIf="contact">
+  <div class="contact-header">
+    <img [ngSrc]="contact.avatarUrl(256)" width="192" height="192" [alt]="contact.name" class="contact-avatar">
+    <h1 class="contact-name">{{ contact.name }}</h1>
+  </div>
+  <div class="contact-details">
+    <div class="detail-item">
+      <span class="detail-label">Email:</span>
+      <span class="detail-value">{{ contact.email }}</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">Phone:</span>
+      <span class="detail-value">{{ contact.phone }}</span>
+    </div>
+    <div class="detail-item">
+      <span class="detail-label">ID:</span>
+      <span class="detail-value">{{ contact.id }}</span>
+    </div>
+  </div>
+  <div class="contact-actions">
+    <button class="btn-edit" (click)="editContact()">Edit</button>
+    <button class="btn-delete" (click)="deleteContact()">Delete</button>
+  </div>
 </div>
+<app-spinner *ngIf="!contact"></app-spinner>
