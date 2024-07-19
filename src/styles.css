@@ -7,5 +7,5 @@
 }
 
 body {
-  @apply mx-8 my-4 bg-orange-50 text-gray-800;
+  @apply bg-orange-50 text-gray-800 dark:bg-gray-800 dark:text-gray-100;
 }

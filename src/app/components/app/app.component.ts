@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HeaderComponent} from "../header/header.component";
 import {HomeComponent} from "../home/home.component";
 import {FooterComponent} from "../footer/footer.component";
+import {FlowbiteService} from "../../services/flowbite.service";
 
 @Component({
   selector: 'app-root',
@@ -9,11 +10,19 @@ import {FooterComponent} from "../footer/footer.component";
   imports: [
     HeaderComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
   ],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'contact-book';
+  constructor(private flowbiteService: FlowbiteService) {
+  }
+
+  ngOnInit(): void {
+    this.flowbiteService.loadFlowbite((flowbite: any) => {
+      console.info('Flowbite loaded', flowbite);
+    });
+  }
 }
