@@ -30,7 +30,7 @@ export class ContactFormComponent implements OnInit {
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      avatar: [null],
+      avatar: [null, Validators.pattern(/^(http|https):\/\//)],
     })
   }
 
